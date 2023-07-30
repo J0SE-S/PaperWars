@@ -27,4 +27,8 @@ public class MainMenuButtonManager : MonoBehaviour {
         Application.Quit(0);
 #endif
     }
+
+    public void GitHub() {Application.OpenURL("https://github.com/J0SE-S/PaperWars");}
+
+    public void Discord() {Application.OpenURL("https://discord.com/app");}
 }
