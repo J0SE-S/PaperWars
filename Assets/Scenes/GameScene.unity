@@ -188,6 +188,13 @@ MonoBehaviour:
   syncInterval: 0
   visualTilemap: {fileID: 1084652075}
   physicalTilemap: {fileID: 123926977}
+  stone: {fileID: 11400000, guid: ed846e33025d4f519ab23df82a9f50f2, type: 2}
+  grass: {fileID: 11400000, guid: 164bd1acf100297558b832ce1b5a9573, type: 2}
+  dirt: {fileID: 11400000, guid: a1ce38bc885f1c003bdac3960e9a9488, type: 2}
+  sand: {fileID: 11400000, guid: cedd5a7f0c210d6ccacf8dc925a1701d, type: 2}
+  shallowWater: {fileID: 11400000, guid: fbb9f88c5b15f4c6598ead8cace05d67, type: 2}
+  water: {fileID: 11400000, guid: 5f415175be38a969aabd004a4032789d, type: 2}
+  deepWater: {fileID: 11400000, guid: 3712d31e155c8b9b0899a0c631d947d0, type: 2}
 --- !u!114 &45902274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,15 +305,39 @@ Tilemap:
   m_Enabled: 1
   m_Tiles: {}
   m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 0
+    m_Data:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
+  m_Origin: {x: -3, y: -2, z: 0}
+  m_Size: {x: 3, y: 2, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:

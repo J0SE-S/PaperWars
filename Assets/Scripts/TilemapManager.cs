@@ -30,7 +30,7 @@ public class TilemapManager : NetworkBehaviour {
     public Tile water;
     public Tile deepWater;
 
-    public override void OnStartServer() {}
+    public override void OnStartServer() {tiles.Add(new Vector3Int(2, 1, 0), TileData.STONE); tiles.Add(new Vector3Int(1, 1, 0), TileData.GRASS);}
 
     public override void OnStartClient() {
         tiles.Callback += OnTilemapUpdate;
@@ -53,20 +53,29 @@ public class TilemapManager : NetworkBehaviour {
     }
 
     void OnTilemapUpdate(SyncDictionary<Vector3Int, TileData>.Operation op, Vector3Int key, TileData item) {
-        if (item == TileData.GRASS || item == TileData.DIRT || item == TileData.SAND) {
-            switch (op) {
-                case SyncIDictionary<Vector3Int, TileData>.Operation.OP_ADD:
+        switch (op) {
+            case SyncIDictionary<Vector3Int, TileData>.Operation.OP_ADD:
+                if (item == TileData.GRASS || item == TileData.DIRT || item == TileData.SAND) {
                     visualTilemap.SetTile(key, DataToTile(item));
-                    break;
-                case SyncIDictionary<Vector3Int, TileData>.Operation.OP_SET:
+                } else {
+                    physicalTilemap.SetTile(key, DataToTile(item));
+                }
+                break;
+            case SyncIDictionary<Vector3Int, TileData>.Operation.OP_SET:
+                if (item == TileData.GRASS || item == TileData.DIRT || item == TileData.SAND) {
                     visualTilemap.SetTile(key, DataToTile(item));
-                    break;
-                case SyncIDictionary<Vector3Int, TileData>.Operation.OP_REMOVE:
-                    break;
-                case SyncIDictionary<Vector3Int, TileData>.Operation.OP_CLEAR:
-                    visualTilemap.ClearAllTiles();
-                    break;
-            }
+                } else {
+                    physicalTilemap.SetTile(key, DataToTile(item));
+                }
+                break;
+            case SyncIDictionary<Vector3Int, TileData>.Operation.OP_REMOVE:
+                visualTilemap.SetTile(key, null);
+                physicalTilemap.SetTile(key, null);
+                break;
+            case SyncIDictionary<Vector3Int, TileData>.Operation.OP_CLEAR:
+                visualTilemap.ClearAllTiles();
+                physicalTilemap.ClearAllTiles();
+                break;
         }
     }
 }
