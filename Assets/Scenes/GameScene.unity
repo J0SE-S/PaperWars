@@ -188,13 +188,26 @@ MonoBehaviour:
   syncInterval: 0
   visualTilemap: {fileID: 1084652075}
   physicalTilemap: {fileID: 123926977}
-  stone: {fileID: 11400000, guid: ed846e33025d4f519ab23df82a9f50f2, type: 2}
-  grass: {fileID: 11400000, guid: 164bd1acf100297558b832ce1b5a9573, type: 2}
-  dirt: {fileID: 11400000, guid: a1ce38bc885f1c003bdac3960e9a9488, type: 2}
-  sand: {fileID: 11400000, guid: cedd5a7f0c210d6ccacf8dc925a1701d, type: 2}
-  shallowWater: {fileID: 11400000, guid: fbb9f88c5b15f4c6598ead8cace05d67, type: 2}
-  water: {fileID: 11400000, guid: 5f415175be38a969aabd004a4032789d, type: 2}
-  deepWater: {fileID: 11400000, guid: 3712d31e155c8b9b0899a0c631d947d0, type: 2}
+  white: {fileID: 11400000, guid: ba46fe534fe89d8ef84699cc3021c8c9, type: 2}
+  missing: {fileID: 11400000, guid: 155f3f19546926bc58205d77987f06cd, type: 2}
+  tin_ore: {fileID: 11400000, guid: 1ef98dfe45f9d871fbbec06ff2426c06, type: 2}
+  gold_ore: {fileID: 11400000, guid: bec90f9001e98c4c7b515d068ef836e3, type: 2}
+  iron_ore: {fileID: 11400000, guid: 4ab3ee6ca480c6fc2a1f5274f1d5becf, type: 2}
+  coal_ore: {fileID: 11400000, guid: fe415bacd2e1d9ccbb207af45d4a1ecd, type: 2}
+  copper_ore: {fileID: 11400000, guid: 5d3346f225d390689af648eae922a299, type: 2}
+  silver_ore: {fileID: 11400000, guid: e3a88a21198b8e5bd99db4a12eac09b5, type: 2}
+  stone: {fileID: 11400000, guid: 6076b5b125d22bdf986a923fb3fec87c, type: 2}
+  grass:
+  - {fileID: 11400000, guid: 4a6c86402b0e237fb876507dbaa72257, type: 2}
+  - {fileID: 11400000, guid: dae8789ebc75b6e7689b255c8879ee57, type: 2}
+  - {fileID: 11400000, guid: 62def4eb0819b1276b0f46357def50dd, type: 2}
+  - {fileID: 11400000, guid: 80c7b30524e9f4af2a3b54e981e90aec, type: 2}
+  - {fileID: 11400000, guid: bc9f6feff29874bd78c5056c473076ec, type: 2}
+  dirt: {fileID: 11400000, guid: 2492e59ab63f3ef73ae144db9d351564, type: 2}
+  sand: {fileID: 11400000, guid: b9cf14aaa7679b1b08d38d1143fe4067, type: 2}
+  shallowWater: {fileID: 11400000, guid: 4dde0032b43fb9e14bc7271ef2822ac9, type: 2}
+  water: {fileID: 11400000, guid: 4fa5bf662a6e9c166bf0266e2169d773, type: 2}
+  deepWater: {fileID: 11400000, guid: 827843c6c8debf4bab7bb6edb43d7bce, type: 2}
 --- !u!114 &45902274
 MonoBehaviour:
   m_ObjectHideFlags: 0

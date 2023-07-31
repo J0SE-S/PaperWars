@@ -22,8 +22,16 @@ public class TilemapManager : NetworkBehaviour {
     public Tilemap visualTilemap;
     public Tilemap physicalTilemap;
 
+    public Tile white;
+    public Tile missing;
+    public Tile tin_ore;
+    public Tile gold_ore;
+    public Tile iron_ore;
+    public Tile coal_ore;
+    public Tile copper_ore;
+    public Tile silver_ore;
     public Tile stone;
-    public Tile grass;
+    public Tile[] grass;
     public Tile dirt;
     public Tile sand;
     public Tile shallowWater;
@@ -42,7 +50,7 @@ public class TilemapManager : NetworkBehaviour {
     public Tile DataToTile(TileData item) {
         switch (item) {
             case TileData.STONE: return stone;
-            case TileData.GRASS: return grass;
+            //case TileData.GRASS: return grass;
             case TileData.DIRT: return dirt;
             case TileData.SAND: return sand;
             case TileData.SHALLOW_WATER: return shallowWater;
